@@ -15,40 +15,47 @@ function numberChoose(){
         document.getElementById("userNumber").innerHTML = inputUser
     }
 
-    function pcNumber(){
+    
+pcNumber(inputUser);
+sumValue();
+winner();
+}
+
+function pcNumber(inputUser){
+
         let pcNumber = Math.floor(Math.random()* 5) +1 ;
+        // console.log(inputUser);
+
         document.getElementById("pcNumber").innerHTML = pcNumber
 
         let sum = inputUser + pcNumber //Somma dei 2 numeri
-        console.log(sum);
+        // console.log(sum);
         
-        function sumValue(){
-             let sum = inputUser + pcNumber
+    }
+        function sumValue(sum){
             if (sum % 2 == 0){
-                console.log("La somma dei due numeri è pari")
+                return true;
             } else {
-                console.log("La somma dei due numeri è dispari")
+                return false;
             }
+    }
 
-            function winner(user){
+      function winner(inputUser, sum){
             let x = false;
-
-            if ( user == 1 && (sum % 2 == 0)) {
+            
+            if ( inputUser == 1 && (sum % 2 == 0)) {
                 x = true;
-            } 
+            } else {
+                x = false;
+            }
 
             if (x == true){
+
                 console.log("HA VINTO IL GIOCATORE!")
+
             } else {
-                console.log("HA VINTO IL COMPUTER!")
+
+                console.log("PAREGGIO")
+
             }
         }
-winner(inputUser);
-    }
-sumValue();
-    
-        }
-pcNumber();
-
-}
-
