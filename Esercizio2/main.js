@@ -23,16 +23,31 @@ function numberChoose(){
         console.log(sum);
         
         function sumValue(){
-            let sum = inputUser + pcNumber
+             let sum = inputUser + pcNumber
             if (sum % 2 == 0){
                 console.log("La somma dei due numeri è pari")
             } else {
                 console.log("La somma dei due numeri è dispari")
             }
+
+            function winner(user){
+            let x = false;
+
+            if ( user == 1 && (sum % 2 == 0)) {
+                x = true;
+            } 
+
+            if (x == true){
+                console.log("HA VINTO IL GIOCATORE!")
+            } else {
+                console.log("HA VINTO IL COMPUTER!")
+            }
         }
-        sumValue();
+winner(inputUser);
     }
+sumValue();
     
+        }
 pcNumber();
 
 }
