@@ -14,11 +14,26 @@ function numberChoose(){
     } else {
         document.getElementById("userNumber").innerHTML = inputUser
     }
-}
 
-function pcNumber(){
-    let pcNumber = Math.floor(Math.random()* 5) +1 ;
-    document.getElementById("pcNumber").innerHTML = pcNumber
-}
+    function pcNumber(){
+        let pcNumber = Math.floor(Math.random()* 5) +1 ;
+        document.getElementById("pcNumber").innerHTML = pcNumber
 
+        let sum = inputUser + pcNumber //Somma dei 2 numeri
+        console.log(sum);
+        
+        function sumValue(){
+            let sum = inputUser + pcNumber
+            if (sum % 2 == 0){
+                console.log("La somma dei due numeri è pari")
+            } else {
+                console.log("La somma dei due numeri è dispari")
+            }
+        }
+        sumValue();
+    }
+    
 pcNumber();
+
+}
+
