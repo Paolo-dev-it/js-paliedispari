@@ -2,7 +2,7 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
-function wordInput (word1) {
+function wordInput () {
 
     let input = prompt("Inserisci una parola");
     let wordReverse = " ";
